@@ -1,0 +1,27 @@
+{
+  "previous_size" : 2200,
+  "frame_size"    : 1600,
+  "future_size"   : 2200,
+  "shift_size"    : 1600,
+  "window_type"   : "uniform",
+  "dilation"      : [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512],
+  "num_of_speaker": 2,
+  "num_of_noise"  : 3,
+
+  "batch_size"    : 12,
+  "epochs"        : 10000,
+  "learning_rate" : 0.0001,
+  "default_float" : "float32",
+
+  "train_source_path" : "./dataset/early_stop/10min/train/noise",
+  "train_target_path" : "./dataset/early_stop/10min/train/orig",
+
+  "test_source_path"  : "./dataset/early_stop/10min/validation/noise",
+  "test_target_path"  : "./dataset/early_stop/10min/validation/orig",
+
+  "load_check_point_name" : "",
+  "save_check_point_name" : "DWC_S_N",
+  "save_check_point_period" : 10,
+  "early_stopping" : true,
+  "plot_file" : "DWC_S_N.plot"
+}

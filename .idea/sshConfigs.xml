@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="128.134.65.21" id="62338210-4a60-4e60-997a-a4ea9b55896a" port="12354" nameFormat="DESCRIPTIVE" username="csp-server17" />
+      <sshConfig authType="PASSWORD" host="128.134.65.22" id="006b854b-a54d-4d50-b403-20da7d87c30e" port="12356" nameFormat="DESCRIPTIVE" username="csp-server3" />
+      <sshConfig authType="PASSWORD" host="27.96.134.166" id="75d4dd24-9464-4fd9-9e40-cc4a7830b26b" port="16022" nameFormat="DESCRIPTIVE" username="ubuntu" />
+      <sshConfig authType="PASSWORD" host="128.134.65.25" id="9b04a8f8-689b-4a6e-a607-6be037535d7d" port="12354" nameFormat="DESCRIPTIVE" username="workstation" />
+      <sshConfig authType="PASSWORD" host="128.134.65.18" id="84b38e2c-c933-4f17-a8ce-328c4d19f26c" port="22" nameFormat="DESCRIPTIVE" username="eunmi" />
+    </configs>
+  </component>
+</project>

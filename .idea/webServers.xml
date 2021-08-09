@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3ccbabd9-4a20-4721-aa95-0b4984ee4e53" name="csp-server3">
+        <fileTransfer rootFolder="/home/csp-server3" accessType="SFTP" host="128.134.65.22" port="12356" sshConfigId="006b854b-a54d-4d50-b403-20da7d87c30e" sshConfig="csp-server3@128.134.65.22:12356 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="79fd499b-300d-4432-ad7b-f8e45e7c1e64" name="csp-server17">
+        <fileTransfer rootFolder="/home/csp-server17" accessType="SFTP" host="128.134.65.21" port="12354" sshConfigId="62338210-4a60-4e60-997a-a4ea9b55896a" sshConfig="csp-server17@128.134.65.21:12354 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="904c628e-607e-4df3-98c8-608bcf025e4c" name="nipa">
+        <fileTransfer rootFolder="/home/ubuntu/TRAIN" accessType="SFTP" host="27.96.134.166" port="16022" sshConfigId="75d4dd24-9464-4fd9-9e40-cc4a7830b26b" sshConfig="ubuntu@27.96.134.166:16022 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="238bc3bb-a376-4fde-a0dd-afd232455088" name="workstation">
+        <fileTransfer rootFolder="/home/workstation" accessType="SFTP" host="128.134.65.25" port="12354" sshConfigId="9b04a8f8-689b-4a6e-a607-6be037535d7d" sshConfig="workstation@128.134.65.25:12354 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="487ec09f-25ec-420d-b20d-50a3f15829c8" name="eunmi">
+        <fileTransfer rootFolder="/home/eunmi" accessType="SFTP" host="128.134.65.18" port="22" sshConfigId="84b38e2c-c933-4f17-a8ce-328c4d19f26c" sshConfig="eunmi@128.134.65.18:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
