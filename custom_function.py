@@ -109,6 +109,8 @@ def write_plot_file(filename, index, value):
     You can write plot file. But it will be override.
     You can clear the file by using "clear_plot_file()" function.
     """
+    if np.isnan(value):
+        value = -1
     with open(filename, 'a') as f:
         f.write("{{x:{}, y:{}}},".format(index, value))
 
@@ -128,6 +130,8 @@ def write_csv_file(filename, index, value):
     You can write plot file. But it will be override.
     You can clear the file by using "clear_csv_file()" function.
     """
+    if np.isnan(value):
+        value = -1
     with open(filename, 'a') as f:
         f.write("{},{}\n".format(index, value))
 
@@ -140,7 +144,7 @@ def clear_csv_file(filename):
         pass
 
 
-def window(window_name, frame_size):
+def window(window_name, frame_size, default_type='float32'):
     check = os.path.isfile('{}/window/{}_{}.npy'.format(load_directory(), window_name, frame_size))
     if check:
         sample = np.load('{}/window/{}_{}.npy'.format(load_directory(), window_name, frame_size))
@@ -150,6 +154,9 @@ def window(window_name, frame_size):
             sample = tf.signal.hann_window(frame_size)
         elif window_name == 'hamming':
             sample = tf.signal.hamming_window(frame_size)
+        elif window_name == 'sine':
+            k = np.array([i for i in range(frame_size)])
+            sample = np.sin(np.pi * k / (frame_size - 1))
         elif window_name == 'uniform':
             sample = tf.ones(frame_size)
         else:
@@ -158,4 +165,4 @@ def window(window_name, frame_size):
         sample = np.array(sample)
         createFolder("{}/window".format(load_directory()))
         np.save('{}/window/{}_{}'.format(load_directory(), window_name, frame_size), sample)
-        return sample
+        return sample.astype(default_type)

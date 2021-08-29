@@ -1,7 +1,5 @@
 import tensorflow as tf
-from tensorflow.keras.layers import Conv1D
-from tensorflow.keras.layers import Conv1DTranspose
-from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import Conv1D, Conv1DTranspose, BatchNormalization
 import os
 import numpy as np
 import custom_function as cf
@@ -21,6 +19,7 @@ class DenoiseWavenetCondition(tf.keras.Model):
 
         # condition dimension increase
         self.conv_cond_channel_up = Conv1DTranspose(1, self.input_size-self.max_condition+1)
+        self.batch_norm_condition = BatchNormalization()
 
         # residual block
         self.residual_block = [ResidualBlock(d) for d in self.dilation]
@@ -35,6 +34,7 @@ class DenoiseWavenetCondition(tf.keras.Model):
         input = self.conv_channel(x)
 
         condition = self.conv_cond_channel_up(condition)
+        condition = self.batch_norm_condition(condition)
         output, input = self.residual_block[0](input, condition)
         for f in self.residual_block[1:]:
             skip_output, input = f(input, condition)

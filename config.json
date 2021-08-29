@@ -4,11 +4,11 @@
   "future_size"   : 2200,
   "shift_size"    : 1600,
   "window_type"   : "uniform",
-  "dilation"      : [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512],
+  "dilation"      : [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512],
   "num_of_speaker": 2,
   "num_of_noise"  : 3,
 
-  "batch_size"    : 12,
+  "batch_size"    : 16,
   "epochs"        : 10000,
   "learning_rate" : 0.0001,
   "default_float" : "float32",
